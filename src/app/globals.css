@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Tody discussion tailwind css base,components,utilities
+ */
+ /*base  default change*/
+   @layer base {
+    h1{
+      @apply text-3xl
+    } 
+   }
+   
+ /*components class name add custome*/
+ @layer components {
+   .btn {
+     @apply text-sm font-semibold py-2 px-4 bg-[#000] text-[#FFF]
+   }
+ }
+ 
+ /*utilities default change*/
+ @layer utilities {
+   .text-body {
+     font-size: 12px;
+   }
+ }
+ 
